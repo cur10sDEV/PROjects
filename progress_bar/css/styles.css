@@ -1,0 +1,31 @@
+body {
+	margin: 10% 10%;
+	font-family: sans-serif;
+}
+
+h1 {
+	font-size: 2.5rem;
+	text-align: center;
+	margin-bottom: 3.5rem;
+}
+
+#head-desc {
+	text-align: center;
+}
+
+p {
+	letter-spacing: 0.07rem;
+	line-height: 1.75;
+	font-size: 1.15rem;
+}
+
+#progress-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 1%;
+	background: linear-gradient(to right, #ff5f6e, #ffc371);
+	width: 0%;
+	z-index: 100;
+	transition: width 0.2s cubic-bezier(0.39, 0.58, 0.57, 1);
+}
