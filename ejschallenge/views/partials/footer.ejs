@@ -1,0 +1,67 @@
+
+        <a href="/compose">
+            <div class="floatPencil">
+                <img class="penImg" src="/img/pen.png">
+            </div>
+        </a>
+    </div>
+
+
+    <!-- MOBILE NAVBAR -->
+    <div id="mobile-navbar">
+
+        <a href="/">
+            <div class="mobile-nav-item home">
+                <img src="/img/home.png" class="mobile-nav-img">
+            </div>
+        </a>
+        <a href="/contact">
+            <div class="mobile-nav-item">
+                <img src="/img/contact.png" class="mobile-nav-img">    
+            </div>
+        </a>
+        <a href="/about">
+            <div class="mobile-nav-item">
+                <img src="/img/about.png" class="mobile-nav-img">
+            </div>
+        </a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="footer-padding">Made with ❤️ by The Daily Bugel</p>
+    </footer>
+    
+    <script type="text/javascript">
+        
+        const body = document.body;
+        const mobileNav = document.querySelector("#mobile-navbar");
+        const floatPencil = document.querySelector(".floatPencil");
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll >= 0) {
+                mobileNav.classList.add("scroll-down");
+                floatPencil.classList.add("scroll-down");
+            }
+
+            if (currentScroll > lastScroll && !mobileNav.classList.contains("scroll-down")) {
+                mobileNav.classList.add("scroll-down");
+                floatPencil.classList.add("scroll-down");
+            }
+
+            if (currentScroll < lastScroll && mobileNav.classList.contains("scroll-down")) {
+                mobileNav.classList.remove("scroll-down");
+                floatPencil.classList.remove("scroll-down");
+            }
+
+            lastScroll = currentScroll;
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/54330/pen-emoji-clipart-md.png" type="image/x-icon">
+    <title>tOdO</title>
+</head>
+<body>
+    
+    <div class="container">
+        <nav>
+            <div class="navItem home"><a href="/">Home</a></div>
+            <div class="navItem  work"><a href="/Work">Work</a></div>
+            <div class="navItem about"><a href="/Play">Play</a></div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero_avatar"><img class="hero_avatar" src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/4_avatar-512.png" alt="A"></div>
+            <h3 class="hero_hi">Hi <%= name %> -> <%= todoType %> </h3>
+            <h3 class="hero_light">Have a nice day. <img class="hero_sideImg" src="https://www.onlygfx.com/wp-content/uploads/2018/09/4-clipart-sun-1.png" alt=":-)"></h3>
+            <div class="hero_task">
+                <h3 class="hero_light">You have <%= taskNo %> tasks.</h3>
+                <img class="hero_sideImg" src="https://image.flaticon.com/icons/png/512/207/207515.png" alt="N">
+            </div>
+        </section>
+
+        <section class="todo">
+            <h2 id="date"> <%= date %> </h2>
+            <div class="todo_tasks">
+
+                <% todoTask.forEach(function(todo) { %>
+                <form action="/delete" method="post">
+                    <div class="todo_tasks_item">
+                        <input type="checkbox" name="checkbox" value="<%= todo._id %>" onchange="this.form.submit()">
+                        <p> <%= todo.todoitem %> </p>
+                    </div>
+                    <input type="hidden" name="listNameToDelete" value="<%= todoType %>"></input>
+                </form>
+                <% }) %>
+
+            </div>
+                
+                
+                <!-- Input Form -->
+                <form action="/" method="post">
+                    <input type="text" name="todoItem" placeholder="New Item" required>
+                    <button type="submit" name="list" value="<%= todoType %>">+</button>
+                </form>
+        </section>
+    </div>
+
+</body>
+</html>

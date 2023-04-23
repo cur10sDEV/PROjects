@@ -1,0 +1,9 @@
+<%- include("partials/header") -%>
+
+        <% results.forEach(function(post) { %>
+                <h2 class="heading"><%= post.title %></h2>
+                <p><%= post.content %></p>
+        <% }) %>
+        
+
+<%- include("partials/footer") -%>

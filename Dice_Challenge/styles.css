@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(75, 75, 75);
+}
+
+h1 {
+    font-size: 5rem;
+    color: green;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+.container {
+    width: 70%;
+    margin: 0 5rem;
+    display: inline-flex;
+}
+
+.dice {
+    text-align: center;
+}
+
+h4 {
+    color: green;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+img {
+    width: 80%;
+}
+
+
+footer {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
